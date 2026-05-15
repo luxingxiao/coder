@@ -3,7 +3,7 @@ services:
   coder:
     # This MUST be stable for our documentation and
     # other automations.
-    image: ghcr.io/coder/coder:${CODER_VERSION:-latest}
+    image: ghcr.m.daocloud.io/coder/coder:${CODER_VERSION:-latest}
     ports:
       - "7080:7080"
     environment:
@@ -31,7 +31,7 @@ services:
   database:
     # Minimum supported version is 13.
     # More versions here: https://hub.docker.com/_/postgres
-    image: "postgres:16"
+    image: "docker.m.daocloud.io/library/postgres:16"
     ports:
       - "5432:5432"
     environment:
